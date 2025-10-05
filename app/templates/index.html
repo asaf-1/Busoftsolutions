@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busoft - פיתוח וייעוץ טכנולוגי</title>
+
+  <!-- למנוע פלאש לבן ולהכהות את כרום/מובייל -->
+  <meta name="theme-color" content="#0b1220" />
+  <style>html{background:#0b1220}</style>
+
+  <!-- Favicon מהלוגו -->
+  <link rel="icon" type="image/png" href="/assets/HeaderFooter/לוגו_לבן.png" />
+  <link rel="apple-touch-icon" href="/assets/HeaderFooter/לוגו_לבן.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Rubik', sans-serif; }
+    .nav-item::after { content:''; display:block; width:0; height:2px; background:#3b82f6; transition:width .3s; }
+    .nav-item:hover::after { width:100%; }
+
+    /* אנימציית נשימה + הארה עדינה ללוגו */
+    @keyframes breathe {
+      0%,100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,255,255,0)); }
+      50%     { transform: scale(1.06); filter: drop-shadow(0 0 18px rgba(255,255,255,.28)); }
+    }
+    .loader-logo { animation: breathe 1.4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- LOADER כהה עם לוגו גדול ובולט -->
+  <div id="loader" class="fixed inset-0 bg-slate-900 flex items-center justify-center z-[9999] transition-opacity duration-300">
+    <div class="flex flex-col items-center select-none" aria-live="polite" aria-busy="true">
+      <img src="/assets/HeaderFooter/לוגו_לבן.png" alt="Busoft" class="h-28 md:h-36 w-auto loader-logo" />
+      <div class="mt-4 text-white/80 font-medium">טוען…</div>
+    </div>
+  </div>
+
+  <!-- ניווט -->
+  <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="/assets/HeaderFooter/לוגו_לבן.png" alt="Busoft Logo" class="h-12">
+        <span class="text-xl font-bold">Busoft</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-item px-2 py-4">אודות</a>
+        <a href="#development" class="nav-item px-2 py-4">פיתוח</a>
+        <a href="#guidance" class="nav-item px-2 py-4">הדרכה</a>
+        <a href="#consulting" class="nav-item px-2 py-4">ליווי וייעוץ</a>
+        <a href="#contact" class="nav-item px-2 py-4">צור קשר</a>
+      </div>
+      <button class="md:hidden focus:outline-none">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero עם לוגו פרלקסה גדול יותר -->
+  <header class="relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20">
+    <div id="hero-parallax" class="pointer-events-none absolute inset-0 flex items-center justify-center z-0">
+      <img
+        src="/assets/HeaderFooter/לוגו_לבן.png"
+        alt="Busoft Mark"
+        class="select-none opacity-20 md:opacity-25 drop-shadow-2xl h-56 md:h-72 will-change-transform transition-transform duration-200 ease-out"
+        style="transform: translate3d(0,0,0) rotateZ(0deg);" />
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">פיתוח וייעוץ טכנולוגי מתקדם</h1>
+      <p class="text-xl md:text-2xl mb-8">מתמחים בבניית פתרונות SaaS, הדרכה וליווי טכנולוגי לעסקים</p>
+      <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">צור קשר</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">אודותינו</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1400&q=60" alt="About Busoft" class="rounded-lg shadow-xl w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">מי אנחנו?</h3>
+          <p class="text-lg mb-6">Busoft היא חברה המתמחה בפיתוח תוכנה וייעוץ טכנולוגי לעסקים. אנו מציעים מגוון שירותים החל מפיתוח אפליקציות ווב ומובייל, דרך הדרכות טכנולוגיות ועד ליווי אישי לצמיחה דיגיטלית.</p>
+          <p class="text-lg">המשימה שלנו היא להפוך טכנולוגיה מורכבת לפשוטה ונגישה לכל עסק, ללא קשר לגודלו או לתחום עיסוקו.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Development -->
+  <section id="development" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">שירותי פיתוח</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="text-blue-500 mb-4"><i data-feather="code" class="w-10 h-10"></i></div>
+          <h3 class="text-xl font-semibold mb-3">פיתוח אפליקציות ווב</h3>
+          <p class="text-gray-600">בניית פלטפורמות מבוססות ענן עם טכנולוגיות מתקדמות כמו React, Node.js ועוד.</p>
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=60" alt="פיתוח ווב" class="w-full h-40 object-cover rounded mt-4">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="text-blue-500 mb-4"><i data-feather="smartphone" class="w-10 h-10"></i></div>
+          <h3 class="text-xl font-semibold mb-3">אפליקציות מובייל</h3>
+          <p class="text-gray-600">פיתוח אפליקציות Native ו-Hybrid ל-Android ו-iOS עם חוויית משתמש מעולה.</p>
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=60" alt="פיתוח מובייל" class="w-full h-40 object-cover rounded mt-4">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="text-blue-500 mb-4"><i data-feather="database" class="w-10 h-10"></i></div>
+          <h3 class="text-xl font-semibold mb-3">ארכיטקטורה ומיקרו-שירותים</h3>
+          <p class="text-gray-600">תכנון מערכות מורכבות עם ארכיטקטורה גמישה וניתנת להרחבה.</p>
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=60" alt="Microservices" class="w-full h-40 object-cover rounded mt-4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guidance -->
+  <section id="guidance" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">הדרכה טכנולוגית</h2>
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=60" alt="SaaS Guidance" class="rounded-lg shadow-xl w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">הדרכת SaaS ופיתוח אתרים</h3>
+          <p class="text-lg mb-6">אנו מציעים הדרכות ממוקדות לבניית אתרים ואפליקציות SaaS, מרעיון ועד מוצר.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-2 mt-1"></i><span>בחירת טכנולוגיות מתאימות</span></li>
+            <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-2 mt-1"></i><span>אסטרטגיות לפיתוח ופריסה מהירים</span></li>
+            <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-2 mt-1"></i><span>טיפים לאופטימיזציה וחוויית משתמש</span></li>
+          </ul>
+          <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">לפרטים נוספים</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting -->
+  <section id="consulting" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">ליווי וייעוץ</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=60" alt="Consulting Team" class="rounded-lg shadow-xl w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">צוות המומחים שלנו</h3>
+          <p class="text-lg mb-6">ב-Busoft אנחנו גאים בצוות הרב-תחומי שלנו הכולל:</p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow"><i data-feather="code" class="text-blue-500 mb-2"></i><h4 class="font-semibold">מפתחים</h4><p class="text-sm text-gray-600">מומחים בטכנולוגיות עדכניות</p></div>
+            <div class="bg-white p-4 rounded shadow"><i data-feather="check-circle" class="text-blue-500 mb-2"></i><h4 class="font-semibold">בודקי תוכנה</h4><p class="text-sm text-gray-600">הבטחת איכות ללא פשרות</p></div>
+            <div class="bg-white p-4 rounded shadow"><i data-feather="trending-up" class="text-blue-500 mb-2"></i><h4 class="font-semibold">יועצים עסקיים</h4><p class="text-sm text-gray-600">הפיכת טכנולוגיה ליתרון תחרותי</p></div>
+            <div class="bg-white p-4 rounded shadow"><i data-feather="users" class="text-blue-500 mb-2"></i><h4 class="font-semibold">מאמנים</h4><p class="text-sm text-gray-600">העברת ידע פרקטי</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (אחד בלבד) -->
+  <section id="contact" class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">צור קשר</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">פרטי יצירת קשר</h3>
+            <div class="space-y-4">
+              <div class="flex items-start"><i data-feather="user" class="mr-3 mt-1"></i><div><h4 class="font-semibold">אורי בוחבוט</h4><p>מנכ"ל Busoft</p></div></div>
+              <div class="flex items-start"><i data-feather="phone" class="mr-3 mt-1"></i><div><h4 class="font-semibold">טלפון</h4><p>+972525050810</p></div></div>
+              <div class="flex items-start"><i data-feather="mail" class="mr-3 mt-1"></i><div><h4 class="font-semibold">אימייל</h4><p>contact@busoft.co.il</p></div></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-gray-800">
+            <h3 class="text-2xl font-semibold mb-4">שלחו לנו הודעה</h3>
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label for="contact-name" class="block mb-1">שם</label>
+                <input type="text" id="contact-name" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label for="contact-email" class="block mb-1">אימייל</label>
+                <input type="email" id="contact-email" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label for="contact-message" class="block mb-1">הודעה</label>
+                <textarea id="contact-message" rows="3" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">שלח</button>
+              <p id="contact-status" class="text-sm mt-2"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="/assets/HeaderFooter/לוגו_לבן.png" alt="Busoft Logo" class="h-10 mr-3">
+          <span class="text-xl font-bold">Busoft</span>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-blue-400 transition duration-300"><i data-feather="facebook"></i></a>
+          <a href="#" class="hover:text-blue-400 transition duration-300"><i data-feather="linkedin"></i></a>
+          <a href="#" class="hover:text-blue-400 transition duration-300"><i data-feather="twitter"></i></a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-6 pt-6 text-center md:text-left">
+        <p class="text-gray-400">© 2023 Busoft. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    // ===== Loader control =====
+    const loader = document.getElementById('loader');
+    function showLoader() {
+      loader.classList.remove('opacity-0','pointer-events-none');
+      loader.setAttribute('aria-busy','true');
+    }
+    function hideLoader() {
+      loader.classList.add('opacity-0','pointer-events-none');
+      loader.setAttribute('aria-busy','false');
+    }
+    window.addEventListener('load', () => { setTimeout(hideLoader, 300); });
+
+    // הצגת לוגו-אנימציה במעבר בין סקשנים (עוגנים)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        showLoader();
+        target.scrollIntoView({ behavior: 'smooth' });
+
+        const obs = new IntersectionObserver((entries, ob) => {
+          if (entries[0].isIntersecting) {
+            setTimeout(() => { hideLoader(); ob.disconnect(); }, 150);
+          }
+        }, { threshold: 0.6 });
+        obs.observe(target);
+        setTimeout(hideLoader, 1200); // פולבאק
+      });
+    });
+
+    // ===== Hero Parallax Logo (גדול יותר) =====
+    (function initHeroParallax(){
+      const header = document.querySelector('header');
+      const logo = document.querySelector('#hero-parallax img');
+      if (!header || !logo) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+
+      let targetX = 0, targetY = 0, currentX = 0, currentY = 0, raf;
+      const maxX = 28;  // px
+      const maxY = 18;  // px
+
+      function onMove(e){
+        const rect = header.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        targetX = (x - 0.5) * maxX;
+        targetY = (y - 0.5) * maxY;
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      function tick(){
+        currentX += (targetX - currentX) * 0.12;
+        currentY += (targetY - currentY) * 0.12;
+        logo.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) rotateZ(${currentX*0.2}deg)`;
+        if (Math.abs(currentX - targetX) > 0.2 || Math.abs(currentY - targetY) > 0.2){
+          raf = requestAnimationFrame(tick);
+        } else {
+          raf = null;
+        }
+      }
+
+      function reset(){
+        targetX = targetY = 0;
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      header.addEventListener('mousemove', onMove);
+      header.addEventListener('mouseleave', reset);
+    })();
+
+    // ===== Contact Form → /api/contact =====
+    (function bindContactForm(){
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('contact-status');
+      if (!form || !statusEl) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name')?.value?.trim();
+        const email = document.getElementById('contact-email')?.value?.trim();
+        const message = document.getElementById('contact-message')?.value?.trim();
+
+        statusEl.textContent = 'שולח...';
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+          });
+          const data = await res.json();
+          if (res.ok && data.ok) {
+            statusEl.textContent = 'הודעה נשלחה ✅';
+            form.reset();
+          } else {
+            statusEl.textContent = 'שגיאה בשליחה.';
+          }
+        } catch {
+          statusEl.textContent = 'שגיאת רשת.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
