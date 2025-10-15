@@ -1,0 +1,20 @@
+﻿services:
+  web:
+    build: .
+    container_name: busoft-dev
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./app/templates:/app/app/templates:ro
+      - ./app/static:/app/app/static:ro
+      - ./wsgi.py:/app/wsgi.py:ro
+      - ./app/api_contact.py:/app/app/api_contact.py:ro
+    environment:
+      MAIL_TO: 
+      MAIL_FROM: 
+      DRY_RUN: 
+      SMTP_HOST: 
+      SMTP_PORT: 
+      SMTP_USER: 
+      SMTP_PASSWORD: 
+    command: uvicorn wsgi:app --host 0.0.0.0 --port 8000 --reload
